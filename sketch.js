@@ -32,7 +32,7 @@ function draw() {
       const charIndex = floor(map(avg, 0, 255, 0, len));
       
       textAlign(CENTER,CENTER);
-      text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5); 
+      text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5);
     }
   }
 }
