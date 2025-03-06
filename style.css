@@ -1,18 +1,16 @@
 html, body {
   margin: 0;
   padding: 0;
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Helvetica Neue', sans-serif; 
+  font-family: Helvetica Neue, sans-serif;
   background-color: #ffffff;
   color: #030303;
-  font-size: 12pt;
+  font-size: 10pt;
   line-height: 8pt;
   letter-spacing: 1px;
-  background-color: #ffffff;
 }
 
 canvas {
@@ -20,12 +18,14 @@ canvas {
 }
 
 button {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100; 
+  font-family: Helvetica Neue, sans-serif;
 }
+
+/* Add this part */
 h1 {
   font-family: 'Helvetica Neue', sans-serif;
-  font-weight: normal;
-  font-size: 48px;
+  font-weight: normal;  /* Remove bold */
+  font-size: 48px;      /* Increase the size of "Mirror" */
 }
+
 
