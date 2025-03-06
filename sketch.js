@@ -5,10 +5,10 @@ let video;
 function setup() {
   createCanvas(720,450);
   video = createCapture(VIDEO);
-  video.size(99,72);
+  video.size(89,72);
   video.hide();
   button = createButton('save');
-  button.position(674, 506);
+  button.position(774, 506);
   button.mousePressed(keyPressed);
 }
 function draw() {
