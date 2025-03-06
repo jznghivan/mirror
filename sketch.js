@@ -15,7 +15,7 @@ function draw() {
   let h = height / video.height;
   video.loadPixels();
 
-  if (video.pixels.length > 0) { // Check if pixels are loaded
+  if (video.pixels.length > 0) { // Ensure pixels are loaded
     for (let j = 0; j < video.height; j++) {
       for (let i = 0; i < video.width; i++) {
         const pixelIndex = (video.width - i + 1 + j * video.width) * 4;
@@ -25,17 +25,23 @@ function draw() {
         const avg = (r + g + b) / 3;
         
         noStroke();
-        fill(avg);
+        fill(0); // Set text color to black
 
         const len = density.length;
         const charIndex = floor(map(avg, 0, 255, 0, len));
 
-        textSize(constrain(h, 8, 20)); // Adjust text size dynamically
+        textSize(constrain(h * 0.8, 10, 25)); // Adjust size
         textAlign(CENTER, CENTER);
         text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5);
       }
     }
   }
+
+  // Draw bottom text
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  fill(0);
+  text("一以心交心, connect with the heart", width / 2, height - 40);
 }
 
 // Resize canvas and update video size on screen rotation
@@ -48,3 +54,4 @@ function windowResized() {
 function keyPressed() {
   saveCanvas('一以心交心', 'jpg');
 }
+
