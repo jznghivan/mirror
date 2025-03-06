@@ -1,11 +1,11 @@
-const density = '一以心交心'
+const density = '以心交心一'
 let video;
 
 
 function setup() {
   createCanvas(720,450);
   video = createCapture(VIDEO);
-  video.size(72,45);
+  video.size(99,72);
   video.hide();
   button = createButton('save');
   button.position(674, 506);
