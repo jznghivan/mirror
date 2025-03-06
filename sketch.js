@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  background(255); // Ensure background is white
+  background(255); // Ensure the background is white
   let w = width / video.width;
   let h = height / video.height;
   video.loadPixels();
@@ -22,12 +22,12 @@ function draw() {
       const b = video.pixels[pixelIndex + 2];
       const brightness = (r + g + b) / 3;
 
-      // Soft contrast mapping
-      const contrast = map(brightness, 100, 150, 255, 0, true); 
+      // Smoothened contrast mapping
+      const contrast = map(brightness, 80, 170, 255, 0, true); 
       const charIndex = floor(map(contrast, 0, 255, density.length - 1, 0));
 
-      fill(0, 120); // Black text with more transparency for a softer effect
-      textSize(w * 0.6); // Smaller text for smoother edges
+      fill(0, 100); // Even softer black text with more transparency
+      textSize(w * 0.5); // Smaller text for more blending
       textAlign(CENTER, CENTER);
       text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5);
     }
