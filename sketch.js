@@ -24,7 +24,7 @@ function draw() {
 
       // Soften contrast by adjusting brightness mapping
       const contrast = map(brightness, 80, 100, 255, 0); // Less extreme mapping
-      const charIndex = floor(map(contrast, 0, 255, density.length - 1, 0));
+      const charIndex = floor(map(contrast, 0, 255, 0));
 
       fill(0, 150); // Black text with slight transparency for softer edges
       textSize(w * 0.65); // Slightly smaller text for smoother appearance
