@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(255); 
   let w = width / video.width;
   let h = height / video.height;
   video.loadPixels();
@@ -22,11 +22,11 @@ function draw() {
       const b = video.pixels[pixelIndex + 2];
       const brightness = (r + g + b) / 3;
 
-      const contrast = map(brightness, 60, 190, 0, 255);
+      const contrast = map(brightness, 60, 190, 255, 0);
       const charIndex = floor(map(contrast, 0, 255, density.length - 1, 0));
 
-      fill(255); 
-      textSize(w * 0.75); 
+      fill(0); // Black text
+      textSize(w * 0.75);
       textAlign(CENTER, CENTER);
       text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5);
     }
