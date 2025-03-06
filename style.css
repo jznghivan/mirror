@@ -21,11 +21,10 @@ button {
   font-family: Helvetica Neue, sans-serif;
 }
 
-/* Add this part */
 h1 {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: normal;  /* Remove bold */
-  font-size: 48px;      /* Increase the size of "Mirror" */
+  font-family: Helvetica Neue, sans-serif;
+  font-weight: normal; 
+  font-size: 50px;      
 }
 
 
