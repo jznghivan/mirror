@@ -26,6 +26,7 @@ button {
 h1 {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;
-  font-size: 60px; 
-  color: #030303; 
+  font-size: 55px; 
+  color: #030303;
+  text-align: center; 
 }
