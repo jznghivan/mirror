@@ -14,8 +14,8 @@ function draw() {
   let h = height / video.height;
   video.loadPixels();
 
-  for (let j = 0; j < video.height; j++) {
-    for (let i = 0; i < video.width; i++) {
+  for (let j = 0; j < video.height; j += 2) {  // Skip every other row for better spacing
+    for (let i = 0; i < video.width; i += 2) {  // Skip every other column
       const pixelIndex = (i + j * video.width) * 4;
       const r = video.pixels[pixelIndex];
       const g = video.pixels[pixelIndex + 1];
@@ -23,13 +23,13 @@ function draw() {
       const brightness = (r + g + b) / 3;
 
       // Smoothened contrast mapping
-      const contrast = map(brightness, 80, 170, 255, 0, true); 
+      const contrast = map(brightness, 80, 170, 255, 0, true);
       const charIndex = floor(map(contrast, 0, 255, density.length - 1, 0));
 
-      fill(0, 100); // Even softer black text with more transparency
-      textSize(w * 0.5); // Smaller text for more blending
+      fill(0); // Solid black text
+      textSize(w * 1.1); // **Larger text for better readability**
       textAlign(CENTER, CENTER);
-      text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5);
+      text(density.charAt(charIndex), i * w + w, j * h + h);
     }
   }
 }
