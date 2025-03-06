@@ -1,7 +1,7 @@
 const density = '以心交心一'
 let video;
 
-unction setup() {
+function setup() {
   createCanvas(720,450);
   video = createCapture(VIDEO);
   video.size(72,45);
