@@ -1,5 +1,7 @@
-const density = '以心交心一';
+const density = '一以心交心'
 let video;
+
+
 function setup() {
   createCanvas(720,450);
   video = createCapture(VIDEO);
@@ -32,7 +34,7 @@ function draw() {
       
       textAlign(CENTER,CENTER);
       text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5);
-}
+    }
   }
 }
 
