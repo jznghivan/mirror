@@ -2,11 +2,10 @@ const density = '以心交心一'
 let video;
 
 function setup() {
-  createCanvas(720, 450);
+  createCanvas(720,450);
   video = createCapture(VIDEO);
-  video.size(144, 90); // Slightly higher resolution for more clarity
+  video.size(72,45);
   video.hide();
-  
   button = createButton('save');
   button.position(674, 506);
   button.mousePressed(keyPressed);
