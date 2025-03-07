@@ -1,16 +1,15 @@
 const density = '以心交心一'
 let video;
-
-
 function setup() {
   createCanvas(720,450);
   video = createCapture(VIDEO);
-  video.size(150,72);
+  video.size(72,45);
   video.hide();
   button = createButton('save');
-  button.position(674, 550);
+  button.position(674, 506);
   button.mousePressed(keyPressed);
 }
+
 function draw() {
   background(255);
   let w = width / video.width;
