@@ -5,7 +5,7 @@ let video;
 function setup() {
   createCanvas(720,450);
   video = createCapture(VIDEO);
-  video.size(100,72);
+  video.size(150,72);
   video.hide();
   button = createButton('save');
   button.position(674, 550);
