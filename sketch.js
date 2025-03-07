@@ -8,14 +8,14 @@ function setup() {
   video.hide();
 
   button = createButton('save');
-  button.position(674, 506);
+  button.position(674, 550);
   button.mousePressed(keyPressed);
 }
 
 function draw() {
   background(255);
-  let w = (width / video.width) * 1.2; 
-  let h = (height / video.height) * 1.2; 
+  let w = (width / video.width) * 1; 
+  let h = (height / video.height) * 1; 
 
   video.loadPixels();
 
