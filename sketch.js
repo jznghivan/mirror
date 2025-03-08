@@ -1,4 +1,4 @@
-const density = '以心交心 一'; 
+const density = '以心交心'; 
 let video;
 
 function setup() {
