@@ -9,7 +9,7 @@ html, body {
   font-family: 'Helvetica', sans-serif; 
   background-color: #ffffff;
   color: #030303;
-  font-weight: 100;
+  font-weight: 50;
   font-size: 17pt;
   line-height: 8pt;
   letter-spacing: 1px;
@@ -20,12 +20,12 @@ canvas {
 }
 button {
   font-family: 'Helvetica', sans-serif;
-  font-weight: 100; 
+  font-weight: 50; 
   font-size: 12pt;
 }
 h1 {
   font-family: 'Helvetica', sans-serif;
-  font-weight: 100;
+  font-weight: 50;
   font-size: 40px;
   color: #030303;
 }
