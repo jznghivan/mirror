@@ -7,13 +7,12 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Helvetica Neue', sans-serif; 
-  background-color: #ffffff;
-  color: #030303;
+  color: white;
   font-weight: 50;
   font-size: 17pt;
   line-height: 8pt;
   letter-spacing: 1px;
-  background-color: #ffffff;
+  background-color: black;
 }
 canvas {
   display: block;
@@ -21,11 +20,12 @@ canvas {
 button {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 50; 
+  color: white;
   font-size: 12pt;
 }
 h1 {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 50;
   font-size: 40px;
-  color: #030303;
+  color: black;
 }
