@@ -1,3 +1,12 @@
+let fps = 30;
+let capturer;
+let numOfFramesToCapture = 0;
+let capturingStartFrame = null;
+
+if (numOfFramesToCapture) {
+  capturer = new CCapture({ format: "png", framerate: fps });
+}
+
 const density = '以心交心'; 
 let video;
 
@@ -37,6 +46,24 @@ function draw() {
       textSize(constrain(w, 8, 20)); 
       text(density.charAt(charIndex), i * w + w * 0.5, j * h + h * 0.5);
     }
+  }
+
+  /* Start and stop canvas capturing */
+  if (numOfFramesToCapture) {
+    if (frameCount === capturingStartFrame) {
+      capturer.start();
+    } else if (frameCount >= capturingStartFrame + numOfFramesToCapture) {
+      noLoop();
+      console.log("Finished recording.");
+      capturer.stop();
+      capturer.save();
+      return;
+    }
+  }
+  
+  if (numOfFramesToCapture && frameCount >= capturingStartFrame) {
+    console.log("Capturing frame");
+    capturer.capture(document.getElementById("defaultCanvas0"));
   }
 }
 
