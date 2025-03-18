@@ -40,7 +40,7 @@ function setup() {
   
   randomSeed(7);
 
-  bgValue = 10;
+  bgValue = 0;
   tileSize = width / 32;
   noiseSize = width;
   zSpeed = 1 / 100;
