@@ -20,12 +20,12 @@ canvas {
 button {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 50; 
-  color: white;
+  color: black;
   font-size: 12pt;
 }
 h1 {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 50;
   font-size: 40px;
-  color: black;
+  color: white;
 }
